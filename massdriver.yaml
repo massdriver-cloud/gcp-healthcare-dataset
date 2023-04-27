@@ -22,7 +22,7 @@ params:
       type: string
       default: UTC
       $md.immutable: true
-      enum: ["UTC", "America/Los_Angeles", "America/Denver", "America/Chicago", "America/Los_Angeles", "Europe/London", "Europe/Rome", "Europe/Kyiv"]
+      enum: ["UTC", "America/Los_Angeles", "America/Denver", "America/Chicago", "America/New_York", "Europe/London", "Europe/Rome", "Europe/Kyiv"]
 
 
 connections:
