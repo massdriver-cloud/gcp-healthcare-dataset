@@ -83,7 +83,7 @@ Form input parameters for configuring a bundle for deployment.
   "us-central1"
   ```
 
-- **`time_zone`** *(string)*: The default timezone used by this dataset. Must be one of: `['UTC']`. Default: `UTC`.
+- **`time_zone`** *(string)*: The default timezone used by this dataset. Must be one of: `['UTC', 'America/Los_Angeles', 'America/Denver', 'America/Chicago', 'America/Los_Angeles', 'Europe/London', 'Europe/Rome', 'Europe/Kyiv']`. Default: `UTC`.
 <!-- PARAMS:END -->
 
 </details>
