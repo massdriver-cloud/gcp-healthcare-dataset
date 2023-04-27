@@ -1,0 +1,58 @@
+schema: draft-07
+name: "gcp-healthcare-dataset"
+description: "A dataset is a container in your Google Cloud project that holds modality-specific healthcare data. Datasets contain other data stores, such as FHIR stores, DICOM stores, and HL7v2 stores, which in turn hold their own types of healthcare data."
+source_url: github.com/YOUR_NAME_HERE/gcp-healthcare-dataset
+access: private
+type: "infrastructure"
+
+
+params:
+  # Examples will show up as configuration presets in the UI _and_
+  # they will be used to test configurations of the bundle.
+  # examples:
+  #   - __name: Development
+  #     foo: bar
+  #   - __name: Production
+  #     foo: foo
+  required:
+    - region
+    - time_zone
+  properties:
+    region:
+      $ref: https://raw.githubusercontent.com/massdriver-cloud/artifact-definitions/main/definitions/types/gcp-region.json
+      title: Region
+      description: GCP region to create the dataset in.
+      $md.immutable: true
+    time_zone:
+      title: Timezone
+      description: The default timezone used by this dataset.
+      type: string
+      default: UTC
+      $md.immutable: true
+      enum: ["UTC"]
+
+
+connections:
+  required:
+    - gcp_authentication
+  properties:
+    gcp_authentication:
+      $ref: massdriver/gcp-service-account
+
+
+artifacts:
+  required:
+    - dataset
+  properties:
+    dataset:
+      $ref: massdriver/gcp-healthcare-dataset
+
+
+ui:
+  ui:order:
+    - region
+    - time_zone
+    - "*"
+  region:
+    ui:field: supportedCloudLocationsDropdown
+    cloudService: gcp
