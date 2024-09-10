@@ -17,7 +17,7 @@ A dataset is a container in your Google Cloud project that holds modality-specif
 
 ## Design
 
-For detailed information, check out our [Operator Guide](operator.mdx) for this bundle.
+For detailed information, check out our [Operator Guide](operator.md) for this bundle.
 
 ## Usage
 
@@ -37,40 +37,9 @@ Form input parameters for configuring a bundle for deployment.
 <summary>View</summary>
 
 <!-- PARAMS:START -->
-## Properties
 
-- **`region`** *(string)*: GCP region to create the dataset in.
+**Params coming soon**
 
-  Examples:
-  ```json
-  "us-east1"
-  ```
-
-  ```json
-  "us-east4"
-  ```
-
-  ```json
-  "us-west1"
-  ```
-
-  ```json
-  "us-west2"
-  ```
-
-  ```json
-  "us-west3"
-  ```
-
-  ```json
-  "us-west4"
-  ```
-
-  ```json
-  "us-central1"
-  ```
-
-- **`time_zone`** *(string)*: The default timezone used by this dataset. Must be one of: `['UTC', 'America/Los_Angeles', 'America/Denver', 'America/Chicago', 'America/New_York', 'Europe/London', 'Europe/Rome', 'Europe/Kyiv']`. Default: `UTC`.
 <!-- PARAMS:END -->
 
 </details>
@@ -83,103 +52,8 @@ Connections from other bundles that this bundle depends on.
 <summary>View</summary>
 
 <!-- CONNECTIONS:START -->
-## Properties
 
-- **`gcp_authentication`** *(object)*: GCP Service Account. Cannot contain additional properties.
-  - **`data`** *(object)*
-    - **`auth_provider_x509_cert_url`** *(string)*: Auth Provider x509 Certificate URL. Default: `https://www.googleapis.com/oauth2/v1/certs`.
-
-      Examples:
-      ```json
-      "https://example.com/some/path"
-      ```
-
-      ```json
-      "https://massdriver.cloud"
-      ```
-
-    - **`auth_uri`** *(string)*: Auth URI. Default: `https://accounts.google.com/o/oauth2/auth`.
-
-      Examples:
-      ```json
-      "https://example.com/some/path"
-      ```
-
-      ```json
-      "https://massdriver.cloud"
-      ```
-
-    - **`client_email`** *(string)*: Service Account Email.
-
-      Examples:
-      ```json
-      "jimmy@massdriver.cloud"
-      ```
-
-      ```json
-      "service-account-y@gmail.com"
-      ```
-
-    - **`client_id`** *(string)*: .
-    - **`client_x509_cert_url`** *(string)*: Client x509 Certificate URL.
-
-      Examples:
-      ```json
-      "https://example.com/some/path"
-      ```
-
-      ```json
-      "https://massdriver.cloud"
-      ```
-
-    - **`private_key`** *(string)*: .
-    - **`private_key_id`** *(string)*: .
-    - **`project_id`** *(string)*: .
-    - **`token_uri`** *(string)*: Token URI. Default: `https://oauth2.googleapis.com/token`.
-
-      Examples:
-      ```json
-      "https://example.com/some/path"
-      ```
-
-      ```json
-      "https://massdriver.cloud"
-      ```
-
-    - **`type`** *(string)*: . Default: `service_account`.
-  - **`specs`** *(object)*
-    - **`gcp`** *(object)*: .
-      - **`project`** *(string)*
-      - **`region`** *(string)*: The GCP region to provision resources in.
-
-        Examples:
-        ```json
-        "us-east1"
-        ```
-
-        ```json
-        "us-east4"
-        ```
-
-        ```json
-        "us-west1"
-        ```
-
-        ```json
-        "us-west2"
-        ```
-
-        ```json
-        "us-west3"
-        ```
-
-        ```json
-        "us-west4"
-        ```
-
-        ```json
-        "us-central1"
-        ```
+**Connections coming soon**
 
 <!-- CONNECTIONS:END -->
 
@@ -193,94 +67,8 @@ Resources created by this bundle that can be connected to other bundles.
 <summary>View</summary>
 
 <!-- ARTIFACTS:START -->
-## Properties
 
-- **`dataset`** *(object)*: GCP Healthcare Dataset.
-  - **`data`** *(object)*
-    - **`infrastructure`** *(object)*: Minimal GCP Infrastructure Config. Cannot contain additional properties.
-      - **`grn`** *(string)*: GCP Resource Name (GRN).
-
-        Examples:
-        ```json
-        "projects/my-project/global/networks/my-global-network"
-        ```
-
-        ```json
-        "projects/my-project/regions/us-west2/subnetworks/my-subnetwork"
-        ```
-
-        ```json
-        "projects/my-project/topics/my-pubsub-topic"
-        ```
-
-        ```json
-        "projects/my-project/subscriptions/my-pubsub-subscription"
-        ```
-
-        ```json
-        "projects/my-project/locations/us-west2/instances/my-redis-instance"
-        ```
-
-        ```json
-        "projects/my-project/locations/us-west2/clusters/my-gke-cluster"
-        ```
-
-    - **`security`** *(object)*: GCP Security Configuration. Cannot contain additional properties.
-      - **`iam`** *(object)*: IAM Roles And Conditions. Cannot contain additional properties.
-        - **`^[a-z]+[a-z_]*[a-z]$`** *(object)*
-          - **`condition`** *(string)*: GCP IAM Condition.
-          - **`role`**: GCP Role.
-
-            Examples:
-            ```json
-            "roles/owner"
-            ```
-
-            ```json
-            "roles/redis.editor"
-            ```
-
-            ```json
-            "roles/storage.objectCreator"
-            ```
-
-            ```json
-            "roles/storage.legacyObjectReader"
-            ```
-
-  - **`specs`** *(object)*
-    - **`gcp`** *(object)*: .
-      - **`project`** *(string)*
-      - **`region`** *(string)*: The GCP region to provision resources in.
-
-        Examples:
-        ```json
-        "us-east1"
-        ```
-
-        ```json
-        "us-east4"
-        ```
-
-        ```json
-        "us-west1"
-        ```
-
-        ```json
-        "us-west2"
-        ```
-
-        ```json
-        "us-west3"
-        ```
-
-        ```json
-        "us-west4"
-        ```
-
-        ```json
-        "us-central1"
-        ```
+**Artifacts coming soon**
 
 <!-- ARTIFACTS:END -->
 
