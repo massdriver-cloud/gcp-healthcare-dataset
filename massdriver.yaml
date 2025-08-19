@@ -3,7 +3,6 @@ name: gcp-healthcare-dataset
 version: 1.0.0
 description: A dataset is a container in your Google Cloud project that holds modality-specific healthcare data. Datasets contain other data stores, such as FHIR stores, DICOM stores, and HL7v2 stores, which in turn hold their own types of healthcare data.
 source_url: https://github.com/massdriver-cloud/gcp-healthcare-dataset
-type: application
 params:
   required:
   - region
