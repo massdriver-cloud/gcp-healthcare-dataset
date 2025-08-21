@@ -1,7 +1,6 @@
 resource "massdriver_artifact" "dataset" {
-  field                = "dataset"
-  provider_resource_id = google_healthcare_dataset.main.id
-  name                 = "GCP Healthcare Dataset ${var.md_metadata.name_prefix}"
+  field    = "dataset"
+  name     = "GCP Healthcare Dataset ${var.md_metadata.name_prefix}"
   artifact = jsonencode(
     {
       data = {
