@@ -33,13 +33,13 @@ connections:
   - gcp_authentication
   properties:
     gcp_authentication:
-      "$ref": massdriver/gcp-service-account
+      "$ref": gcp-service-account
 artifacts:
   required:
   - dataset
   properties:
     dataset:
-      "$ref": massdriver/gcp-healthcare-dataset
+      "$ref": gcp-healthcare-dataset
 ui:
   ui:order:
   - region
